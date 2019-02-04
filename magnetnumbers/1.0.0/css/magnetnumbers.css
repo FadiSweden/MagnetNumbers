@@ -1,0 +1,5 @@
+.MagnetInputNum::-webkit-inner-spin-button,
+.MagnetInputNum::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}

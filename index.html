@@ -1,0 +1,689 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="magnetnumbers/1.0.0/css/magnetnumbers.css" type="text/css" />
+    <style>
+		html {
+	font-size: 14px;
+  font-weight: 300;
+}
+
+
+
+@media (min-width: 992px) {
+	.navbar-logo {
+		position: absolute;
+		right: 100px;
+		margin-left: -120px !important;  /* 50% of your logo width */
+		display: block;
+	}
+	.pricing-header {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+	header {
+		background: #f5b335;
+		height: 80px;
+		position: fixed;
+		top: 0;
+		transition: top 0.2s ease-in-out;
+		width: 100%;
+	}
+
+	.nav-up {
+		top: -80px;
+	}
+	.pricing-header{
+		margin-top: 90px;
+	}
+
+}
+
+.navbar-logo {
+    font-size: 2rem;
+}
+
+.container {
+  max-width: 960px;
+}
+@media (max-height: 420px){
+	.pricing-header {
+		margin-top: 70px;
+
+	}
+}
+.pricing-header {
+	background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 6px solid #f1f1f1;
+	max-width: 90%;
+	padding: 20px;
+	text-align: center;
+	z-index: -1;
+}
+
+.pricing-header .lead {
+	font-size: 2.2rem;
+}
+.hLine{
+	text-decoration: overline;
+	-webkit-text-decoration-color: #fff; /* Safari */
+	text-decoration-color: #fff;
+	padding: 20px !important;
+}
+@media (max-width: 450px){
+	.hLine{
+		border: 3px solid #fff;
+		padding: 10px;
+		font-size: 1.2rem;
+		text-decoration: none;
+	}
+	.pricing-header .lead {
+		font-size: 1.8rem;
+	}
+}
+.card-deck .card {
+  min-width: 220px;
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+@media (max-width: 990px){
+	header{
+		//position: absolute;
+		background-color: rgba(0,0,0, 0.8);
+		margin-top: 0;
+		z-index: 999999;
+	}
+}
+header{
+		z-index: 999999;
+	}
+
+@media (min-width: 990px){
+header{
+	//position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	margin-top: 0;
+
+}
+}
+.bg-cover {
+	background-image:url('assets/media/img/magnet.svg');
+	background-attachment: fixed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+	min-height: 50rem;
+	border-radius: 0;
+	width: 100%;
+	color: #fff;
+	z-index: -2;
+	background-repeat: no-repeat;
+	-webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+	filter: blur(10px);
+	transition: all 1s ease;
+}
+
+.bg-cover-hover {
+	-webkit-filter: blur(0); /* Safari 6.0 - 9.0 */
+	filter: blur(0);
+}
+
+.mcover {
+	top: 0;
+	left: 0;
+	min-height: 50rem;
+	height: auto;
+	border-radius: 0;
+	color: #fff;
+}
+//nav btn animation
+.menu {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  margin: auto;
+  border: 5px solid transparent;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.bar {
+  height: 2px;
+  width: 40px;
+  display: block;
+  margin: 13px auto;
+  position: relative;
+  background-color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.model-2 .menu:hover .bar:nth-of-type(1) {
+  background-color: #55C0EB;
+  -moz-transform: translateY(15px) rotate(45deg);
+  -ms-transform: translateY(15px) rotate(45deg);
+  -webkit-transform: translateY(15px) rotate(45deg);
+  transform: translateY(15px) rotate(45deg);
+}
+.model-2 .menu:hover .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.model-2 .menu:hover .bar:nth-of-type(3) {
+  background-color: #F3705A;
+  -moz-transform: translateY(-15px) rotate(-45deg);
+  -ms-transform: translateY(-15px) rotate(-45deg);
+  -webkit-transform: translateY(-15px) rotate(-45deg);
+  transform: translateY(-15px) rotate(-45deg);
+}
+.model-2 .bar:nth-of-type(1) {
+  -moz-animation: rotateR 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+  -webkit-animation: rotateR 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+  animation: rotateR 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+}
+.model-2 .bar:nth-of-type(2) {
+  -moz-animation: fade 1.5s cubic-bezier(0.1, 0.8, 0.1, 1);
+  -webkit-animation: fade 1.5s cubic-bezier(0.1, 0.8, 0.1, 1);
+  animation: fade 1.5s cubic-bezier(0.1, 0.8, 0.1, 1);
+}
+.model-2 .bar:nth-of-type(3) {
+  background-color: #fff;
+  -moz-animation: rotateL 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+  -webkit-animation: rotateL 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+  animation: rotateL 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
+}
+
+.nav-item:hover .cover {
+	-webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   filter: grayscale(100%);
+   transition: all 0.5s ease;
+ }
+nav > div > ul > li > a, nav > div > ul > li > ul > li > a, nav > div > ul > li > a:hover, nav > div > ul > li > ul > li > a:hover{
+	color: #FFFFFF;
+}
+nav > button{
+	color: #FFFFFF;
+	outline: none;
+	border: none;
+	transition: all 0.5s ease;
+}
+
+nav > button:focus {outline:0;}
+
+a {
+    color: #FFFFFF;
+	font-size: 1.3rem;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #000;
+}
+
+
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #000;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #FFFFFF;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+/* Keyframes */
+@-webkit-keyframes fill {
+	0% {
+		width: 0%;
+		height: 1px;
+	}
+	50% {
+		width: 100%;
+		height: 1px;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+		background: #333;
+	}
+}
+
+.myImgB {
+	filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.myImgB:hover {
+	filter: drop-shadow(8px 8px 10px gray) invert(100%);
+    -webkit-filter: drop-shadow(8px 8px 10px gray) invert(100%);
+}
+
+.logoFltr {
+	fill: #000000;
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+	transition: all .5s ease;
+}
+
+.logoFltr:hover {
+	fill: #000000;
+	filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+@media (max-width: 990px){
+	.fa-caret-down{
+		padding-left: 40px;
+	}
+}
+
+@media (min-width: 765px) and (max-width: 835px) {
+	.sub, .add{
+		max-width:3rem;
+		max-height:3rem;
+	}
+}
+.counter {
+	max-width:4rem;
+}
+.MagnetInputNum {
+	text-align:center;
+	outline:0;
+	border: 0;
+}
+
+.MagnetInputNum:focus {outline:0;}
+.sub, .add{
+	width:4rem;
+	height:4rem;
+}
+.btn-outline-magnet-plus {
+    color: #415A6B;
+    background-color: #E8EAE9;
+    background-image: none;
+    border-color: #55C0EB;
+}
+.btn-outline-magnet-plus:hover {
+    color: #fff;
+    background-color: #55C0EB;
+    background-image: none;
+    border-color: #55C0EB;
+}
+.btn-outline-magnet-plus:focus {
+    outline:none !important;
+    box-shadow:none !important;
+}
+.btn-outline-magnet-plus:active {
+    color: #fff;
+    background-color: #55C0EB !important;
+    background-image: none;
+    border-color: #55C0EB !important;
+    outline:none !important;
+    box-shadow:none !important;
+}
+.btn-outline-magnet-minus {
+    color: #415A6B;
+    background-color: #E8EAE9;
+    background-image: none;
+    border-color: #F3705A;
+}
+.btn-outline-magnet-minus:hover {
+    color: #fff;
+    background-color: #F3705A;
+    background-image: none;
+    border-color: #F3705A;
+}
+.btn-outline-magnet-minus:focus {
+    outline:none !important;
+    box-shadow:none !important;
+}
+.btn-outline-magnet-minus:active {
+    color: #fff;
+    background-color: #F3705A !important;
+    background-image: none;
+    border-color: #F3705A !important;
+    outline:none !important;
+    box-shadow:none !important;
+}
+button, input {
+    vertical-align: middle;
+}
+
+input:disabled {
+	background: #ffffff;
+	color: #000;
+}
+
+.card-title {
+    margin-bottom: 0;
+    display: -webkit-inline-box;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.01);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+footer {
+	color: #999;
+	background-color: #222;
+	margin-top: 2rem! important;
+}
+
+.whiteTxt{
+	color: #fff;
+}
+
+#ttPriceHolder{
+	transition all 0.5s ease;
+}
+
+@media (min-width: 992px) {
+	.clsFollow {
+	margin-left: 0;
+	margin-right: 0;
+	max-width: 100%;
+	}
+}
+.clsFollow {
+	position: fixed;
+	bottom: 0;
+	z-index: 4;
+}
+.bg-magnet {
+  background-image: linear-gradient(to right, rgba(243, 112, 90, 1) 50%,rgba(85, 192, 235, 1) 50%);
+}
+.linkto, .linkto:hover {
+  color: #000;
+  text-decoration: none;
+}
+	</style>
+    <title>Custom Magnet Input Number</title>
+  </head>
+
+  <body>
+	<div class="bg-cover"></div>
+	<section class="mcover">
+		<header id="myHeader">
+
+			<nav class="navbar transparent navbar-expand-lg shift">
+				<a class="navbar-brand" href="#"><img class="mb-2 logoFltr" src="assets/media/img/magnet.svg" alt="" width="50"></a>
+				<h3 class="navbar-logo display-4">Magnet Numbers</h3>
+				<button class="navbar-toggler mod model-2" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="MENU" >
+					<div class="menu">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"> </div>
+					</div>
+					MENU
+				</button>
+
+				<div class="navbar-collapse collapse" id="navbarsExample04" style="">
+					<ul class="navbar-nav mr-auto">
+
+						<li class="nav-item">
+							<a class="nav-link" href="magnetnumbers/1.0.0/README.md">README</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="magnetnumbers/1.0.0/LICENSE">LICENSE</a>
+						</li>
+
+            <li class="nav-item">
+							<a class="nav-link" href="#">DOWNLOAD</a>
+						</li>
+
+            <li class="nav-item">
+							<a class="nav-link" href="#">DONATE</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- End header and navigation
+		================================================== -->
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+			<h2 class="hLine">MAGNET NUMBERS</h2>
+			<p class="lead">With Magnet Numbers jquery plugIn will make inputs type number with a specific class and attributes, step Up and Down buttons much easier and supported on all cross browsers</p>
+      <p class="lead">Pay attention the files that must be included stylesheet & jquery files (magnetnumbers.css & magnetnumbers.js) and the the js file must be followd after the main jquery file</p>
+		</div>
+
+	</section>
+	<!-- End Top Section
+		================================================== -->
+
+	<hr id="FnstScrl">
+
+		<div class="container" id="ttPriceHolder">
+			<div id="headPrice" class="card-deck mb-3 text-center">
+				<div class="card mb-12 box-shadow">
+					<div class="card-body bg-magnet">
+						<h3 class="card-title pricing-card-title"><span class="whiteTxt"> Various uses and customizable of Magnet Input Type Number </span></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="container">
+
+			<div class="card-deck mb-3 text-center">
+				<div class="card mb-4 box-shadow">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Max 9</h4>
+					</div>
+					<div class="card-body MagnetQuantityElm">
+						<button type="button" class="sub MagnetStepDownBtn btn btn-lg btn-outline-magnet-minus"> - </button>
+						<h1 class="card-title pricing-card-title">
+							<span class="Count">
+								<input id="fonster1" name="fonster1" class="counter MagnetInputNum" type="number" step="1" size="2" maxlength="2" value="0" min="0" max="9">
+							</span>
+						</h1>
+						<button type="button" class="add MagnetStepUpBtn btn btn-lg btn-outline-magnet-plus"> + </button>
+						<ul class="list-unstyled mt-3 mb-4">
+							<li>Step UP & Step Down by 1</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card mb-4 box-shadow">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Max 20</h4>
+					</div>
+					<div class="card-body MagnetQuantityElm">
+						<button type="button" class="sub MagnetStepDownBtn btn btn-lg btn-outline-magnet-minus"> - </button>
+						<h1 class="card-title pricing-card-title">
+							<span class="Count">
+								<input id="fonster2" name="fonster2" class="counter MagnetInputNum" type="number" step="3" size="2" maxlength="2" value="0" min="0" max="20">
+							</span>
+						</h1>
+						<button type="button" class="add MagnetStepUpBtn btn btn-lg btn-outline-magnet-plus"> + </button>
+						<ul class="list-unstyled mt-3 mb-4">
+							<li>Step UP & Step Down by 3</li>
+						</ul>
+					</div>
+				</div>
+				<div class="card mb-4 box-shadow">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Min 2</h4>
+					</div>
+					<div class="card-body MagnetQuantityElm">
+						<button type="button" class="sub MagnetStepDownBtn btn btn-lg btn-outline-magnet-minus"> - </button>
+						<h1 class="card-title pricing-card-title">
+							<span class="Count">
+								<input id="fonster3" name="fonster3" class="counter MagnetInputNum" type="number" step="1.5" size="2" maxlength="2" value="0" min="2" max="">
+							</span>
+						</h1>
+						<button type="button" class="add MagnetStepUpBtn btn btn-lg btn-outline-magnet-plus"> + </button>
+						<ul class="list-unstyled mt-3 mb-4">
+							<li>Step UP & Step Down by 1.5</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-deck mb-3 text-center">
+				<div class="card mb-12 box-shadow">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Disabled</h4>
+					</div>
+					<div class="card-body MagnetQuantityElm">
+						<button type="button" class="sub MagnetStepDownBtn btn btn-lg btn-outline-magnet-minus"> - </button>
+						<h1 class="card-title pricing-card-title">
+							<span class="Count">
+								<input id="fonster4" name="fonster4" disabled class="MagnetInputNum" size="13" step="4.33" maxlength="2" type="number" value="0" min="0" max="50">
+							</span>
+						</h1>
+						<button type="button" class="add MagnetStepUpBtn btn btn-lg btn-outline-magnet-plus"> + </button>
+						<ul class="list-unstyled mt-3 mb-4">
+							<li>The disabled attribute can be set to keep a user from using the &lt;input&gt;</code> element until some other condition has been met (like selecting a checkbox, etc.). <a class="linkto" href="https://www.w3schools.com/tags/att_input_disabled.asp">Disabled input</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<hr>
+
+	<footer class="pt-4 border-top center">
+		<div class="container">
+				<div class="col-mb6 float-left d-inline">
+					<img class="mb-2 logoFltr" src="assets/media/img/hypericum.svg" alt="" width="60">
+					<small class="d-block mb-3 text-muted"><span class="copyright"></span><span id="companyName">FlowerNet.se</span></small>
+				</div>
+				<div class="col-mb6 float-right d-inline">
+					<h5>Follow Me:</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="https://twitter.com/f_nimer">TWITTER</a></li>
+						<li><a class="text-muted" href="https://instagram.com/f_nimer">INSTAGRAM</a></li>
+					</ul>
+				</div>
+		</div>
+	</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+    <script src="magnetnumbers/1.0.0/js/magnetnumbers.js"></script>
+    <script>
+
+		//bg hover animate blur
+		$(".pricing-header").hover(function () {
+			$(".bg-cover").toggleClass("bg-cover-hover");
+		});
+		//End blur
+
+		//copyright
+		$(document).ready(function(){
+			var	toDay, copyright, fullOfYear,
+			copyright = $('.copyright'),
+			toDay = new Date(),
+			fullOfYear=toDay.getFullYear();
+			copyright.html('© ' + fullOfYear + ' ');
+		});
+		// end copyright
+
+		// Hide Header on on scroll down
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+			if (window.matchMedia('(min-width: 992px)').matches) {
+				didScroll = true;
+			}
+		});
+
+		setInterval(function() {
+			if (didScroll) {
+				hasScrolled();
+				didScroll = false;
+			}
+		}, 250);
+
+		function hasScrolled() {
+			var st = $(this).scrollTop();
+
+			// Make sure they scroll more than delta
+			if(Math.abs(lastScrollTop - st) <= delta)
+				return;
+
+			// If they scrolled down and are past the navbar, add class .nav-up.
+			// This is necessary so you never see what is "behind" the navbar.
+			if (st > lastScrollTop && st > navbarHeight){
+				// Scroll Down
+				$('header').removeClass('nav-down').addClass('nav-up');
+			} else {
+				// Scroll Up
+				if(st + $(window).height() < $(document).height()) {
+					$('header').removeClass('nav-up').addClass('nav-down');
+				}
+			}
+
+			lastScrollTop = st;
+		}
+    </script>
+
+  </body>
+</html>
