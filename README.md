@@ -28,23 +28,6 @@ and  include the css file
   </body>
 </html>
 ```
-```html
-<html>
-  <head>
-    <link rel="stylesheet" href="magnetnumbers/1.0.0/css/magnetnumbers.css" type="text/css" />
-  </head>
-
-  <body>
-    <div class="MagnetQuantityElm">
-      <button type="button" class="sub MagnetStepDownBtn btn btn-lg btn-outline-success"> - </button>
-      <input class="counter MagnetInputNum" type="number" step="2" size="2" maxlength="2" value="0" min="0" max="20">
-      <button type="button" class="add MagnetStepUpBtn btn btn-lg btn-outline-success"> + </button>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="magnetnumbers/1.0.0/js/magnetnumbers.js"></script>
-  </body>
-</html>
-```
 
 There's also a [demo page](index.html) that works fine with boostrap 4.
 
